@@ -1,0 +1,4 @@
+# Immutable, previously CI-tested engine revision; not a floating main.
+repository: bakeb7j0/bambu-gitops
+commit: 9a61a1fc67c33ed1d3108694b0da9c45d06125de
+status: experimental-read-only
