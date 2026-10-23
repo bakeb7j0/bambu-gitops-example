@@ -24,7 +24,7 @@ Read [DO-NOT-PRINT.md](DO-NOT-PRINT.md) before copying anything. Yes, that filen
 ## Try the validator (offline and read-only)
 
 ```bash
-python3 -m pip install -e 'git+https://github.com/bakeb7j0/bambu-gitops.git@9a61a1fc67c33ed1d3108694b0da9c45d06125de#egg=bambu-gitops'
+python3 -m pip install -e 'git+https://github.com/bakeb7j0/bambu-gitops.git@534e810801927896a7339994c1b5a9949ae0e392#egg=bambu-gitops'
 bambu-gitops validate .
 ```
 
