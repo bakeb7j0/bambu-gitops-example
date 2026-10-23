@@ -1,0 +1,38 @@
+name: Synthetic Contract Conformance - NOT PRINT VALIDATION
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  reference-instance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout deliberately fictional config
+        uses: actions/checkout@v4
+      - name: Checkout pinned engine
+        uses: actions/checkout@v4
+        with:
+          repository: bakeb7j0/bambu-gitops
+          ref: 9a61a1fc67c33ed1d3108694b0da9c45d06125de
+          path: _engine
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install engine
+        run: python -m pip install ./_engine
+      - name: Verify immutably pinned engine commit
+        run: |
+          grep -Fx "commit: 9a61a1fc67c33ed1d3108694b0da9c45d06125de" bambu-gitops.lock
+          test "$(git -C _engine rev-parse HEAD)" = "9a61a1fc67c33ed1d3108694b0da9c45d06125de"
+      - name: Assert this is unambiguously synthetic
+        run: python3 tests/check_synthetic.py
+      - name: Run read-only schema conformance
+        run: bambu-gitops validate . | tee /tmp/validation.json
+      - name: Contract smoke tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Safety message
+        run: |
+          echo "::warning::DO NOT RUN YOUR PRINTER ON THESE SETTINGS. Green CI means schema-valid, NOT hardware-safe."
+          echo "SYNTHETIC DATA ONLY. NOT A PRINTABLE CONFIGURATION."
