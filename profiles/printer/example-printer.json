@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1",
+  "id": "example-printer",
+  "kind": "printer",
+  "display_name": "DO NOT PRINT - fictional printer profile",
+  "nozzle_diameter_mm": 0.4,
+  "settings": {
+    "schema_demo_only": "SYNTHETIC - NOT REAL HARDWARE CONFIGURATION"
+  },
+  "reviewed": false
+}
