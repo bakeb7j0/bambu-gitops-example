@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "instance": {
+    "id": "example-p1s",
+    "display_name": "SYNTHETIC DEMO - DO NOT PRINT"
+  },
+  "hardware": {
+    "printer_model": "Fictional P1S-shaped schema example - NOT A REAL CONFIG",
+    "hotend": "FICTIONAL - DO NOT PRINT",
+    "nozzle": {
+      "diameter_mm": 0.4,
+      "material": "SYNTHETIC TEST DATA"
+    },
+    "capabilities": {
+      "validated_mvs_mm3_s": 16,
+      "max_nozzle_temperature_c": 280
+    }
+  },
+  "profiles": {
+    "printer": [
+      "example-printer"
+    ],
+    "process": [
+      "example-process"
+    ],
+    "filament": [
+      "pla-basic"
+    ]
+  },
+  "calibrations": [
+    {
+      "filament_id": "pla-basic",
+      "nozzle_mm": 0.4,
+      "kind": "pressure_advance_k",
+      "value": 0.02,
+      "status": "measured",
+      "notes": "FICTIONAL TEST VALUE. NEVER USE ON REAL HARDWARE."
+    }
+  ]
+}
