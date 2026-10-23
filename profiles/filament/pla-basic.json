@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "id": "pla-basic",
+  "kind": "filament",
+  "display_name": "DO NOT PRINT - fictional PLA profile",
+  "material": "SYNTHETIC ONLY",
+  "manufacturer": "FICTIONAL VENDOR",
+  "settings": {
+    "schema_demo_only": "DO NOT PRINT - NOT A FILAMENT RECIPE"
+  },
+  "reviewed": false
+}
