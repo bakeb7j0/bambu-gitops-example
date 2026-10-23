@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+*.tgz
+*.zip
+*.tar.gz
+*.3mf
+*.gcode
+*.gcode.3mf
+*.key
+*.pem
+.env
