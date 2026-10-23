@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.1",
+  "id": "example-process",
+  "kind": "process",
+  "display_name": "DO NOT PRINT - fictional process profile",
+  "settings": {
+    "schema_demo_only": "SYNTHETIC - NOT A SLICER RECIPE"
+  },
+  "reviewed": false
+}
